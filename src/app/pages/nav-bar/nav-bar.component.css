@@ -1,0 +1,28 @@
+/* Sidebar styling */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    top: 0;
+    background-color: #747D8C;
+    position: sticky;
+  }
+  
+  /* Text white for better visibility on the dark background */
+  .text-white {
+    color: white !important;
+  }
+  
+  /* Customize links and active state */
+  .nav-link {
+    color: white !important;
+  }
+  
+  .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+ 
+  hr.text-white {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
