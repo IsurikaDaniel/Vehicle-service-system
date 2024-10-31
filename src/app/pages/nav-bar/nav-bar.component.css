@@ -7,12 +7,10 @@
     position: sticky;
   }
   
-  /* Text white for better visibility on the dark background */
   .text-white {
     color: white !important;
   }
   
-  /* Customize links and active state */
   .nav-link {
     color: white !important;
   }
