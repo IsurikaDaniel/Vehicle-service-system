@@ -15,8 +15,8 @@
         Home
       </a>
     </li>
-    <li>
-      <a href="#" class="nav-link">
+    <li (click)="changeSelectNavBar('Appointment')" routerLink="/Appointment">
+      <a [ngClass]="{'active': SelectNavBar == 'Appointment'}" class="nav-link">
         <svg class="bi pe-none me-2" width="16" height="16">
           <use xlink:href="#speedometer2" />
         </svg>
@@ -39,32 +39,32 @@
         Service
       </a>
     </li>
-    <li>
-      <a href="#" class="nav-link">
+    <li (click)="changeSelectNavBar('Rules')" routerLink="/Rules">
+      <a [ngClass]="{'active': SelectNavBar == 'Rules'}" class="nav-link">
         <svg class="bi pe-none me-2" width="16" height="16">
           <use xlink:href="#people-circle" />
         </svg>
         Rules and regulations
       </a>
     </li>
-    <li>
-      <a href="#" class="nav-link">
+    <li (click)="changeSelectNavBar('AboutUs')" routerLink="/AboutUs">
+      <a [ngClass]="{'active': SelectNavBar == 'AboutUs'}" class="nav-link">
         <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#people-circle" />
+          <use xlink:href="#people-circle"/>
         </svg>
         About Us
       </a>
     </li>
-    <li>
-      <a href="#" class="nav-link">
+    <li (click)="changeSelectNavBar('Contact')" routerLink="/Contact">
+      <a [ngClass]="{'active': SelectNavBar == 'Contact'}" class="nav-link">
         <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#people-circle" />
+          <use xlink:href="#people-circle"/>
         </svg>
         Contact
       </a>
     </li>
-    <li>
-      <a href="#" class="nav-link">
+    <li (click)="changeSelectNavBar('Feedback')" routerLink="/Feedback">
+      <a [ngClass]="{'active': SelectNavBar == 'Feedback'}" class="nav-link">
         <svg class="bi pe-none me-2" width="16" height="16">
           <use xlink:href="#people-circle" />
         </svg>
