@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+h1{
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    justify-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+h1 h2{
+    color: #6B1B2C;
+    font-weight: 350;
+}
+/* .img-fluid{
+    height: 200px;
+    width: 200px;
+} */
+.card-img {
+    max-height: 250px; 
+    object-fit: cover;
+  }
+  
+  
+  .container {
+    max-width: 1200px; /* To control the overall width */
+  }
+  

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
@@ -12,6 +12,7 @@ import { RuleAndRegulationsComponent } from './pages/rule-and-regulations/rule-a
 import { SinginComponent } from './pages/singin/singin.component';
 import { AdminAccontsViewComponent } from './pages/admin-acconts-view/admin-acconts-view.component';
 import { AdminAppointmentsViewComponent } from './pages/admin-appointments-view/admin-appointments-view.component';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,19 @@ import { AdminAppointmentsViewComponent } from './pages/admin-appointments-view/
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'Vehicle-service';
+
+  // ngOnInit() {
+  //   Aos.init();
+  // }
+  ngOnInit() {
+    Aos.init({
+      duration: 800, // Adjust the animation duration in milliseconds
+      easing: 'ease-in-out', // Set the easing style
+      once: true, // Animation will only happen once while scrolling down
+      mirror: false // No animation while scrolling past elements
+    });
+  }
+  
 }
