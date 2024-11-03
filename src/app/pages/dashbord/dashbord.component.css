@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: end; 
+    align-items: center; 
+    width: 100%; 
+    margin-top: 20px;
+}
+
+.USER {
+    width: 70px; 
+    height: 80px; 
+   /* margin-left: 10px; /* Optional: Space between text and image */
+}
+.modal-content{
+background-color: #8D939D;
+}
+
+input {
+    width: 70%;
+    display: block;
+    margin: 0 auto; 
+    background-color: #DFE4EA;
+}
