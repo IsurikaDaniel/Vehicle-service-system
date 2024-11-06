@@ -13,11 +13,12 @@ import { SinginComponent } from './pages/singin/singin.component';
 import { AdminAccontsViewComponent } from './pages/admin-acconts-view/admin-acconts-view.component';
 import { AdminAppointmentsViewComponent } from './pages/admin-appointments-view/admin-appointments-view.component';
 import Aos from 'aos';
+import { AdminFeedbackViewComponent } from './pages/admin-feedback-view/admin-feedback-view.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavBarComponent,AppointmentComponent,LoginComponent,DashbordComponent,CustomerAccountComponent,VehicleAccountComponent,ServiceComponent,FeedbackComponent,RuleAndRegulationsComponent,SinginComponent,AdminAccontsViewComponent,AdminAppointmentsViewComponent],
+  imports: [RouterOutlet,NavBarComponent,AppointmentComponent,LoginComponent,DashbordComponent,CustomerAccountComponent,VehicleAccountComponent,ServiceComponent,FeedbackComponent,RuleAndRegulationsComponent,SinginComponent,AdminAccontsViewComponent,AdminAppointmentsViewComponent,AdminFeedbackViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

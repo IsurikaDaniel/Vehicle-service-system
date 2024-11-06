@@ -39,14 +39,7 @@
         Service
       </a>
     </li>
-    <li (click)="changeSelectNavBar('Rules')" routerLink="/Rules">
-      <a [ngClass]="{'active': SelectNavBar == 'Rules'}" class="nav-link">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#people-circle" />
-        </svg>
-        Rules and regulations
-      </a>
-    </li>
+  
     <li (click)="changeSelectNavBar('AboutUs')" routerLink="/AboutUs">
       <a [ngClass]="{'active': SelectNavBar == 'AboutUs'}" class="nav-link">
         <svg class="bi pe-none me-2" width="16" height="16">
@@ -55,14 +48,7 @@
         About Us
       </a>
     </li>
-    <li (click)="changeSelectNavBar('Contact')" routerLink="/Contact">
-      <a [ngClass]="{'active': SelectNavBar == 'Contact'}" class="nav-link">
-        <svg class="bi pe-none me-2" width="16" height="16">
-          <use xlink:href="#people-circle"/>
-        </svg>
-        Contact
-      </a>
-    </li>
+    
     <li (click)="changeSelectNavBar('Feedback')" routerLink="/Feedback">
       <a [ngClass]="{'active': SelectNavBar == 'Feedback'}" class="nav-link">
         <svg class="bi pe-none me-2" width="16" height="16">
@@ -72,6 +58,38 @@
       </a>
     </li>
   </ul>
+
+  <!-- admin nav  -->
+  <hr class="text-white">
+  <span class="fs-4">Admin</span>
+
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li (click)="changeSelectNavBar('AdminAppointment')" routerLink="/AdminAppointment">
+      <a [ngClass]="{'active': SelectNavBar == 'AdminAppointment'}" class="nav-link">
+        <svg class="bi pe-none me-2" width="16" height="16">
+          <use xlink:href="#speedometer2" />
+        </svg>
+        Appointment
+      </a>
+    </li>
+    <li (click)="changeSelectNavBar('AdminAcc')" routerLink="/AdminAcc">
+      <a class="nav-link" [ngClass]="{'active': SelectNavBar == 'AdminAcc'}">
+        <svg class="bi pe-none me-2" width="16" height="16">
+          <use xlink:href="#table" />
+        </svg>
+        Account
+      </a>
+    </li>
+    <li (click)="changeSelectNavBar('AdminFeedback')" routerLink="/AdminFeedback">
+      <a [ngClass]="{'active': SelectNavBar == 'AdminFeedback'}" class="nav-link">
+        <svg class="bi pe-none me-2" width="16" height="16">
+          <use xlink:href="#people-circle" />
+        </svg>
+        Feedback
+      </a>
+    </li>
+  </ul>
+  
   <hr class="text-white">
   <div class="dropdown">
     <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
