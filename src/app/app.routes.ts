@@ -6,15 +6,20 @@ import { AppComponent } from './app.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { RuleAndRegulationsComponent } from './pages/rule-and-regulations/rule-and-regulations.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
+import { VehicleAccountComponent } from './pages/vehicle-account/vehicle-account.component';
 
 export const routes: Routes = [
     {
-        path:"Home",
+        path:"",
         component:DashbordComponent
     },
     {
         path:"Customer_Account",
         component:CustomerAccountComponent
+    },
+    {
+        path:"VehicleDetails",
+        component:VehicleAccountComponent
     },
     {
         path:"Service",

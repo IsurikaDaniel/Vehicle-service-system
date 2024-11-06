@@ -3,18 +3,19 @@
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-        <span class="fs-4">Account</span>
+        <span class="fs-4 acc">Account</span>
       </a>
 
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Your Details</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Vehicle Details</a></li>
+        <li class="nav-item" (click)="changeSelectAccount('VehicleDetails')" routerLink="/VehicleDetails">
+          <a [ngClass]="{'active': SelectAccount == 'VehicleDetails'}" class="nav-link">Vehicle Details</a></li>
       </ul>
     </header>
 
 
-  <div class="container">
-    <h3>Welcome to our service <br>
+  <div class="container mb-5">
+    <h3 class="mb-3">Welcome to our service <br>
         make your <br> Account to get best service </h3>
     <div class="form-group">
         <input type="text" placeholder="Customer ID">
@@ -35,5 +36,5 @@
     <div class="form-group">
         <input type="text" placeholder="Address">
     </div>
-    <button>Next</button>
+    <button>ADD</button>
   </div>
