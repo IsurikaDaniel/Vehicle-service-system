@@ -1,4 +1,4 @@
-.app{
+.app {
     background: url('https://canadianautodealer.ca/wp-content/uploads/2024/06/shutterstock_1477775285.jpg') no-repeat center center;
     /* width: 95%;
     margin-top: 20px; */
@@ -8,8 +8,9 @@
     min-height: 100vh;
     background-size: cover;
 }
+
 .container {
-    background: rgba(255, 255, 255, 0.8); 
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     width: 100%;
@@ -58,4 +59,19 @@ button:hover {
     .container {
         max-width: 90%;
     }
+}
+
+
+.custom-radio:checked {
+
+    background-color: #6B1B2C;
+    border-color: #6B1B2C;
+}
+
+.custom-radio:checked+.form-check-label {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    color: #6B1B2C;
+    font-weight: bold;
 }
