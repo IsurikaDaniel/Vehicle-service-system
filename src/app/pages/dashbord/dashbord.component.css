@@ -22,8 +22,7 @@ input {
     background-color: #DFE4EA;
 }
 /* wellome card */
-/* From Uiverse.io by Smit-Prajapati */ 
-.card {
+/* .card {
     width: 300px;
     height: 200px;
     background: #243137;
@@ -189,11 +188,10 @@ input {
       background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
       opacity: 0;
     }
-  }
+  } */
 
   /* sale card */
 
-  /* From Uiverse.io by Yaya12085 */ 
 .cardsale {
     padding: 1rem;
     background-color: #fff;
@@ -271,3 +269,5 @@ input {
     height: 100%;
     border-radius: 0.25rem;
   }
+
+  /* full diagram */
