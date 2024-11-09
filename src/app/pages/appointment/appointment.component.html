@@ -3,7 +3,7 @@
     <div class="container">
         <h2>Schedule your Appointment</h2>
         <div class="form-group">
-            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Your Name" [(ngModel)]="Appointment.name">
         </div>
         <div class="form-group">
             <!-- <input type="text" placeholder="Vehicle Type"> -->
@@ -16,18 +16,18 @@
             </select>
         </div>
         <div class="form-group">
-            <input type="text" placeholder="Vehicle Number">
+            <input type="text" placeholder="Vehicle Number" [(ngModel)]="Appointment.number">
         </div>
         <div class="form-group">
-            <input type="email" placeholder="Email">
+            <input type="email" placeholder="Email"  [(ngModel)]="Appointment.email">
         </div>
         <div class="form-group">
-            <input type="date">
+            <input type="date"  [(ngModel)]="Appointment.date">
         </div>
         <div class="form-group">
             <!-- <input type="text" placeholder="Location"> -->
             <select>
-                <option value="" disabled selected>Location</option>
+                <option value="" disabled selected >Location</option>
                 <option value="Location1">Panadura</option>
                 <option value="Location2">Colombo</option>
                 <option value="Location3">Kluthara</option>
