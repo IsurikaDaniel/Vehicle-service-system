@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -16,4 +16,7 @@ export class NavBarComponent {
   public changeSelectNavBar(menuName:string){
     this.SelectNavBar = menuName;
   }
+
+  @Input() role: string | null = null; // Receives the user role from the parent component
+
 }

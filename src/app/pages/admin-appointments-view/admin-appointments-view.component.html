@@ -46,6 +46,7 @@
 
     <table class="table table-bordered table-hover">
         <tr>
+            <th>ID</th>
             <th>Customer Name</th>
             <th>Vehicle Type</th>
             <th>Vehicle Number</th>
@@ -53,21 +54,77 @@
             <th>Date</th>
             <th>Location</th>
             <th>Service</th>
-            <th>Payments</th>
+            <!-- <th>Payments</th> -->
+            <th>Update</th>
         </tr>
 
-        <tr>
-            <td>Nethmi</td>
-            <td>Car</td>
-            <td>BCN123</td>
-            <td>nethugmail.com</td>
-            <td>11-08-2024</td>
-            <td>Colombo</td>
-            <td>Full service</td>
-            <td>Card Payments</td>
+        <tr *ngFor="let appointment of appointmentList; index as i">
+            <td>{{appointment.id}}</td>
+            <td>{{appointment.name}}</td>
+            <td>{{appointment.vehicleType}}</td>
+            <td>{{appointment.number}}</td>
+            <td>{{appointment.email}}</td>
+            <td>{{appointment.date}}</td>
+            <td>{{appointment.location}}</td>
+            <td>{{appointment.service}}</td>
+            <!-- <td>Card Payments</td> -->
+            <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateAppointment(appointment)"><i class="bi bi-pencil-square"></i></button></td>
+            <td><button class="btn btn-danger" (click)="deleteAppointmentById(appointment.id)"><i class="bi bi-trash-fill"></i></button></td>
         </tr>
     </table>
 
+
+    <!-- update modal -->
+
+    
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Update Appointment</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">ID</label>
+              <input type="text" class="form-control" [(ngModel)]="appointmentTemp.id" id="recipient-name" disabled="true">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Name</label>
+              <input type="text" class="form-control" [(ngModel)]="appointmentTemp.name" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Vehicle Type</label>
+              <input type="text" class="form-control" [(ngModel)]="appointmentTemp.vehicleType" id="recipient-name">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Vehicle Number</label>
+                <input type="text" class="form-control" [(ngModel)]="appointmentTemp.number" id="recipient-name">
+              </div>
+            <div class="mb-3">
+              <label for="recipient-name" class="col-form-label">Email</label>
+              <input type="text" class="form-control" [(ngModel)]="appointmentTemp.email" id="recipient-name">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Date</label>
+                <input type="text" class="form-control" [(ngModel)]="appointmentTemp.date" id="recipient-name">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Location</label>
+                <input type="text" class="form-control" [(ngModel)]="appointmentTemp.location" id="recipient-name">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Service</label>
+                <input type="text" class="form-control" [(ngModel)]="appointmentTemp.service" id="recipient-name">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="saveAppointment()" data-bs-dismiss="modal">Update Customer</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     <!-- page next -->

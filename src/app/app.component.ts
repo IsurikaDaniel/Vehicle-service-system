@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
-import { LoginComponent } from './pages/login/login.component';
 import { DashbordComponent } from './pages/dashbord/dashbord.component';
 import { CustomerAccountComponent } from './pages/customer-account/customer-account.component';
 import { VehicleAccountComponent } from './pages/vehicle-account/vehicle-account.component';
@@ -18,7 +17,7 @@ import { AdminFeedbackViewComponent } from './pages/admin-feedback-view/admin-fe
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavBarComponent,AppointmentComponent,LoginComponent,DashbordComponent,CustomerAccountComponent,VehicleAccountComponent,ServiceComponent,FeedbackComponent,RuleAndRegulationsComponent,SinginComponent,AdminAccontsViewComponent,AdminAppointmentsViewComponent,AdminFeedbackViewComponent],
+  imports: [RouterOutlet,NavBarComponent,AppointmentComponent,DashbordComponent,CustomerAccountComponent,VehicleAccountComponent,ServiceComponent,FeedbackComponent,RuleAndRegulationsComponent,SinginComponent,AdminAccontsViewComponent,AdminAppointmentsViewComponent,AdminFeedbackViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
