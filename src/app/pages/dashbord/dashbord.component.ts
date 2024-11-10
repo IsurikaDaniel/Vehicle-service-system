@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
-
+declare var bootstrap: any;
 interface SidebarOption {
   label: string;
   route: string;
@@ -47,10 +47,10 @@ export class DashbordComponent {
   login() {
     this.getAllUsers().subscribe((res: Account[]) => {
       this.usersList = res; // Assign the response to the instance property
-      console.log(this.usersList);
-       
+      console.log('Fetched users:', this.usersList);
+      
       // Find a matching user in the users array
-      const foundUser  = this.usersList.find(user => 
+      const foundUser   = this.usersList.find(user => 
         user.email === this.loginObj.email && user.password === this.loginObj.password
       );
 
@@ -66,14 +66,16 @@ export class DashbordComponent {
           title: 'Success',
           text: 'Login successful!',
           icon: 'success'
-        });
+        }).then(() => {
+          // Close the modal and navigate to the appropriate dashboard based on the role
+          this.closeModal();
 
-        // Navigate to the appropriate dashboard based on the role
-        if (this.selectedRole === 'Admin') {
-          this.router.navigate(['/admin-appoinments-view']);
-        } else if (this.selectedRole === 'Customer') {
-          this.router.navigate(['/appoinment']);
-        }
+          if (this.selectedRole === 'Admin') {
+            this.router.navigate(['/admin-appointments-view']);
+          } else if (this.selectedRole === 'Customer') {
+            this.router.navigate(['/app-customer-account']);
+          }
+        });
       } else {
         // If no matching user is found, show error
         Swal.fire({
@@ -90,6 +92,17 @@ export class DashbordComponent {
         icon: "error"
       });
     });
+  }
+
+  // Method to close the modal
+  closeModal() {
+    const modalElement = document.getElementById('loginModal');
+    if (modalElement) {
+      const modal = bootstrap.Modal.getInstance(modalElement);
+      if (modal) {
+        modal.hide(); // Hide the modal
+      }
+    }
   }
 
   // Enable or disable login button based on input fields

@@ -5,7 +5,6 @@ import { ServiceComponent } from './pages/service/service.component';
 import { AppComponent } from './app.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
-import { VehicleAccountComponent } from './pages/vehicle-account/vehicle-account.component';
 import { AdminAccontsViewComponent } from './pages/admin-acconts-view/admin-acconts-view.component';
 import { AdminAppointmentsViewComponent } from './pages/admin-appointments-view/admin-appointments-view.component';
 import { AdminFeedbackViewComponent } from './pages/admin-feedback-view/admin-feedback-view.component';
@@ -18,10 +17,6 @@ export const routes: Routes = [
     {
         path:"Customer_Account",
         component:CustomerAccountComponent
-    },
-    {
-        path:"VehicleDetails",
-        component:VehicleAccountComponent
     },
     {
         path:"Service",

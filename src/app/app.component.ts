@@ -4,7 +4,6 @@ import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { AppointmentComponent } from './pages/appointment/appointment.component';
 import { DashbordComponent } from './pages/dashbord/dashbord.component';
 import { CustomerAccountComponent } from './pages/customer-account/customer-account.component';
-import { VehicleAccountComponent } from './pages/vehicle-account/vehicle-account.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { RuleAndRegulationsComponent } from './pages/rule-and-regulations/rule-and-regulations.component';
@@ -17,7 +16,7 @@ import { AdminFeedbackViewComponent } from './pages/admin-feedback-view/admin-fe
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavBarComponent,AppointmentComponent,DashbordComponent,CustomerAccountComponent,VehicleAccountComponent,ServiceComponent,FeedbackComponent,RuleAndRegulationsComponent,SinginComponent,AdminAccontsViewComponent,AdminAppointmentsViewComponent,AdminFeedbackViewComponent],
+  imports: [RouterOutlet,NavBarComponent,AppointmentComponent,DashbordComponent,CustomerAccountComponent,ServiceComponent,FeedbackComponent,RuleAndRegulationsComponent,SinginComponent,AdminAccontsViewComponent,AdminAppointmentsViewComponent,AdminFeedbackViewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
