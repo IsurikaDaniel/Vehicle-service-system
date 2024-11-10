@@ -1,65 +1,82 @@
-
 <div class="app">
     <div class="container">
-        <h2>Schedule your Appointment</h2>
-        <div class="form-group">
-            <input type="text" placeholder="Your Name" [(ngModel)]="Appointment.name">
-        </div>
-        <div class="form-group">
-            <!-- <input type="text" placeholder="Vehicle Type"> -->
-            <select>
-                <option value="" disabled selected>Vehicle Type</option>
-                <option value="Location1">Jeep</option>
-                <option value="Location2">Sports car</option>
-                <option value="Location3">Motorcycles</option>
-                <option value="Location3">Buses</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <input type="text" placeholder="Vehicle Number" [(ngModel)]="Appointment.number">
-        </div>
-        <div class="form-group">
-            <input type="email" placeholder="Email"  [(ngModel)]="Appointment.email">
-        </div>
-        <div class="form-group">
-            <input type="date"  [(ngModel)]="Appointment.date">
-        </div>
-        <div class="form-group">
-            <!-- <input type="text" placeholder="Location"> -->
-            <select>
-                <option value="" disabled selected >Location</option>
-                <option value="Location1">Panadura</option>
-                <option value="Location2">Colombo</option>
-                <option value="Location3">Kluthara</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <select>
-                <option value="" disabled selected>Service</option>
-                <option value="service1">Oil Changes</option>
-                <option value="service2">Repair services</option>
-                <option value="service3">Taior change</option>
-            </select>
-        </div>
-
-        <!-- readio btn -->
-        <div class="d-flex align-items-center p-2">
-            <div class="form-check me-3">
-                <input class="form-check-input custom-radio" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                    Card Payments
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input custom-radio" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                    Cash Payments
-                </label>
-            </div>
+      <h2>Schedule your Appointment</h2>
+      
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" [(ngModel)]="appointment.name">
+      </div>
+      
+      <div class="form-group">
+        <select [(ngModel)]="appointment.vehicleType">
+          <option value="">Vehicle Type</option>
+          <option value="Jeep">Jeep</option>
+          <option value="Sports car">Sports car</option>
+          <option value="Motorcycles">Motorcycles</option>
+          <option value="Buses">Buses</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <input type="text" placeholder="Vehicle Number" [(ngModel)]="appointment.number">
+      </div>
+      
+      <div class="form-group">
+        <input type="email" placeholder="Email" [(ngModel)]="appointment.email">
+      </div>
+      
+      <div class="form-group">
+        <input type="date" [(ngModel)]="appointment.date">
+      </div>
+      
+      <div class="form-group">
+        <select [(ngModel)]="appointment.location">
+          <option value="">Location</option>
+          <option value="Panadura">Panadura</option>
+          <option value="Colombo">Colombo</option>
+          <option value="Kalutara">Kalutara</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <select [(ngModel)]="appointment.service" >
+          <option value="">Service</option>
+          <option value="Oil Changes">Oil Changes</option>
+          <option value="Repair Services">Repair Services</option>
+          <option value="Tire Change">Tire Change</option>
+        </select>
+      </div>
+  
+      <!-- Payment Option -->
+      <div class="d-flex align-items-center p-2">
+        <div class="form-check me-3">
+          <input 
+            class="form-check-input custom-radio" 
+            type="radio" 
+            name="paymentOption" 
+            [(ngModel)]="appointment.paymentOption" 
+            [value]="'Card Payments'"
+          >
+          <label class="form-check-label">
+            Card Payments
+          </label>
         </div>
         
-        
-        
-        <button>Submit</button>
+        <div class="form-check">
+          <input 
+            class="form-check-input custom-radio" 
+            type="radio" 
+            name="paymentOption" 
+            [(ngModel)]="appointment.paymentOption" 
+            [value]="'Cash Payments'" 
+            checked
+          >
+          <label class="form-check-label">
+            Cash Payments
+          </label>
+        </div>
+      </div>
+      
+      <button (click)="addAppointment()">Submit</button>
     </div>
-</div>
+  </div>
+  
