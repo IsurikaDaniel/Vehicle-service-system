@@ -11,15 +11,14 @@
         <th>Update</th>
     </tr>
 
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr *ngFor="let account of accountList; index as i">
+        <td>{{account.id}}</td>
+        <td>{{account.name}}</td>
+        <td>{{account.contact}}</td>
+        <td>{{account.email}}</td>
+        <td>{{account.address}}</td>
+        <td>{{account.vehicleType}}</td>
+        <td>{{account.vehicleNumber}}</td>
         <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil-square"></i></button></td>
         <td><button class="btn btn-danger" ><i class="bi bi-trash-fill"></i></button></td>
     </tr>
