@@ -1,28 +1,37 @@
-<div class="container">
-  <table class="table table-bordered table-hover">
-    <tr>
-        <th>ID</th>
-        <th>Customer Name</th>
-        <th>Customer Contact</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Vehicle Type</th>
-        <th>Vehicle Number</th>
-        <th>Update</th>
-    </tr>
+<div class="row">
+  <div class="col-3">
+    <app-admin-sidebar></app-admin-sidebar>
+  </div>
+  <div class="col-9">
 
-    <tr *ngFor="let account of accountList; index as i">
-        <td>{{account.id}}</td>
-        <td>{{account.name}}</td>
-        <td>{{account.contact}}</td>
-        <td>{{account.email}}</td>
-        <td>{{account.address}}</td>
-        <td>{{account.vehicleType}}</td>
-        <td>{{account.vehicleNumber}}</td>
-        <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil-square"></i></button></td>
-        <td><button class="btn btn-danger" ><i class="bi bi-trash-fill"></i></button></td>
-    </tr>
-</table>
+    <div class="container">
+      <table class="table table-bordered table-hover">
+        <tr>
+          <th>ID</th>
+          <th>Customer Name</th>
+          <th>Customer Contact</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Vehicle Type</th>
+          <th>Vehicle Number</th>
+          <th>Update</th>
+        </tr>
+
+        <tr *ngFor="let account of accountList; index as i">
+          <td>{{account.id}}</td>
+          <td>{{account.name}}</td>
+          <td>{{account.contact}}</td>
+          <td>{{account.email}}</td>
+          <td>{{account.address}}</td>
+          <td>{{account.vehicleType}}</td>
+          <td>{{account.vehicleNumber}}</td>
+          <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                class="bi bi-pencil-square"></i></button></td>
+          <td><button class="btn btn-danger"><i class="bi bi-trash-fill"></i></button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>
 <!-- <div class="my-3 p-3 bg-body rounded shadow-sm">
     <h6 class="border-bottom pb-2 mb-0">Suggestions</h6>

@@ -7,33 +7,33 @@
     </a>
     <hr class="text-white">
     <ul class="nav nav-pills flex-column mb-auto">
-      <li (click)="changeSelectNavBar('Home')" routerLink="" class="nav-item">
-        <a [ngClass]="{'active': SelectNavBar == 'Home'}" class="nav-link" >
+      <li (click)="changeSelectSidebar('Dash')" routerLink="" class="nav-item">
+        <a [ngClass]="{'active': SelectSidebar == 'Dash'}" class="nav-link" >
           <svg class="bi pe-none me-2" width="16" height="16">
-            <use xlink:href="#home" />
+            <use xlink:href="#Dash" />
           </svg>
-          Home
+          Dash Bord
         </a>
       </li>
       
-      <li (click)="changeSelectNavBar('AdminAppointment')" routerLink="/AdminAppointment">
-        <a [ngClass]="{'active': SelectNavBar == 'AdminAppointment'}" class="nav-link">
+      <li (click)="changeSelectSidebar('AdminAppointment')" routerLink="/AdminAppointment">
+        <a [ngClass]="{'active': SelectSidebar == 'AdminAppointment'}" class="nav-link">
           <svg class="bi pe-none me-2" width="16" height="16">
             <use xlink:href="#speedometer2" />
           </svg>
           Appointment
         </a>
       </li>
-      <li (click)="changeSelectNavBar('AdminAcc')" routerLink="/AdminAcc">
-        <a class="nav-link" [ngClass]="{'active': SelectNavBar == 'AdminAcc'}">
+      <li (click)="changeSelectSidebar('AdminAcc')" routerLink="/AdminAcc">
+        <a class="nav-link" [ngClass]="{'active': SelectSidebar == 'AdminAcc'}">
           <svg class="bi pe-none me-2" width="16" height="16">
             <use xlink:href="#table" />
           </svg>
           Account
         </a>
       </li>
-      <li (click)="changeSelectNavBar('AdminFeedback')" routerLink="/AdminFeedback">
-        <a [ngClass]="{'active': SelectNavBar == 'AdminFeedback'}" class="nav-link">
+      <li (click)="changeSelectSidebar('AdminFeedback')" routerLink="/AdminFeedback">
+        <a [ngClass]="{'active': SelectSidebar == 'AdminFeedback'}" class="nav-link">
           <svg class="bi pe-none me-2" width="16" height="16">
             <use xlink:href="#people-circle" />
           </svg>

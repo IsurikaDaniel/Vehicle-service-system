@@ -10,9 +10,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './admin-sidebar.component.css'
 })
 export class AdminSidebarComponent {
-  public SelectNavBar = 'Home';
+  public SelectSidebar = 'Dash';
 
-  public changeSelectNavBar(menuName:string){
-    this.SelectNavBar = menuName;
+  public changeSelectSidebar(menuName:string){
+    this.SelectSidebar = menuName;
   }
 }

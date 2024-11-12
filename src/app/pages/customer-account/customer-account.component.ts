@@ -1,11 +1,12 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { NavBarComponent } from "../nav-bar/nav-bar.component";
 
 @Component({
   selector: 'app-customer-account',
   standalone: true,
-  imports: [RouterLink,NgClass],
+  imports: [NavBarComponent],
   templateUrl: './customer-account.component.html',
   styleUrl: './customer-account.component.css'
 })

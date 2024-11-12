@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AdminSidebarComponent } from "../admin-sidebar/admin-sidebar.component";
 
 @Component({
   selector: 'app-admin-acconts-view',
   standalone: true,
-  imports: [FormsModule,CommonModule,HttpClientModule],
+  imports: [FormsModule, CommonModule, HttpClientModule, AdminSidebarComponent],
   templateUrl: './admin-acconts-view.component.html',
   styleUrl: './admin-acconts-view.component.css'
 })
