@@ -1,21 +1,18 @@
 import { NgClass } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-nav-bar',
+  selector: 'app-admin-sidebar',
   standalone: true,
   imports: [RouterLink,NgClass],
-  templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.css'
+  templateUrl: './admin-sidebar.component.html',
+  styleUrl: './admin-sidebar.component.css'
 })
-export class NavBarComponent {
-
+export class AdminSidebarComponent {
   public SelectNavBar = 'Home';
 
   public changeSelectNavBar(menuName:string){
     this.SelectNavBar = menuName;
   }
-
-  @Input() role: string | null = null;
 }

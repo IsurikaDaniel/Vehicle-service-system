@@ -6,17 +6,17 @@ import { DashbordComponent } from './pages/dashbord/dashbord.component';
 import { CustomerAccountComponent } from './pages/customer-account/customer-account.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
-import { RuleAndRegulationsComponent } from './pages/rule-and-regulations/rule-and-regulations.component';
-import { SinginComponent } from './pages/singin/singin.component';
 import { AdminAccontsViewComponent } from './pages/admin-acconts-view/admin-acconts-view.component';
 import { AdminAppointmentsViewComponent } from './pages/admin-appointments-view/admin-appointments-view.component';
 import Aos from 'aos';
 import { AdminFeedbackViewComponent } from './pages/admin-feedback-view/admin-feedback-view.component';
+import { AdminDasbordComponent } from './common/admin-dasbord/admin-dasbord.component';
+import { AdminSidebarComponent } from './common/admin-sidebar/admin-sidebar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavBarComponent,AppointmentComponent,DashbordComponent,CustomerAccountComponent,ServiceComponent,FeedbackComponent,RuleAndRegulationsComponent,SinginComponent,AdminAccontsViewComponent,AdminAppointmentsViewComponent,AdminFeedbackViewComponent],
+  imports: [RouterOutlet,NavBarComponent,AppointmentComponent,DashbordComponent,CustomerAccountComponent,ServiceComponent,FeedbackComponent,AdminAccontsViewComponent,AdminAppointmentsViewComponent,AdminFeedbackViewComponent,AdminDasbordComponent,AdminSidebarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

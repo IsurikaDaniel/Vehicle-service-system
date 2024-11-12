@@ -44,7 +44,7 @@ export class DashbordComponent {
   }
 
   // Handle login functionality - check users array and validate credentials
-  login() {
+  login(pagename:String):void {
     this.getAllUsers().subscribe((res: Account[]) => {
       this.usersList = res; // Assign the response to the instance property
       console.log('Fetched users:', this.usersList);
@@ -71,9 +71,9 @@ export class DashbordComponent {
           this.closeModal();
 
           if (this.selectedRole === 'Admin') {
-            this.router.navigate(['/admin-appointments-view']);
+            this.router.navigate(['/AdminAppointment']);
           } else if (this.selectedRole === 'Customer') {
-            this.router.navigate(['/app-customer-account']);
+            this.router.navigate(['/Customer_Account']);
           }
         });
       } else {
