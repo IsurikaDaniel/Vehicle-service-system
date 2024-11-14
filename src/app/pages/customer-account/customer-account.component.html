@@ -13,34 +13,34 @@
             <h3 class="mb-3">Make your Account to <br> get best service </h3>
 
             <div class="form-group">
-                <input type="text" placeholder="Customer Name">
+                <input type="text" placeholder="Customer Name" [(ngModel)]="customerAcount.name">
             </div>
 
             <div class="form-group">
-                <input type="text" placeholder="Customer Contact">
+                <input type="text" placeholder="Customer Contact" [(ngModel)]="customerAcount.contact">
             </div>
 
             <div class="form-group">
-                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Email" [(ngModel)]="customerAcount.email">
             </div>
 
             <div class="form-group">
-                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Address" [(ngModel)]="customerAcount.address">
             </div>
 
             <div class="form-group">
-                <input type="text" placeholder="Vehicle Type">
+                <input type="text" placeholder="Vehicle Type" [(ngModel)]="customerAcount.vehicleType">
             </div>
 
             <div class="form-group">
-                <input type="text" placeholder="Vehicle Number">
+                <input type="text" placeholder="Vehicle Number" [(ngModel)]="customerAcount.vehicleNumber">
             </div>
             <!-- 
   <div class="form-group">
       <input type="text" placeholder="Cheeky Number">
   </div> -->
 
-            <button>SUBMIT</button>
+            <button (click)="addcustomerAcount()">SUBMIT</button>
 
         </div>
     </div>
