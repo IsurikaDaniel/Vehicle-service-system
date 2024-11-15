@@ -1,14 +1,14 @@
 .app {
     background: url('https://canadianautodealer.ca/wp-content/uploads/2024/06/shutterstock_1477775285.jpg') no-repeat center center;
-    /* width: 95%;
-    margin-top: 20px; */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-size: cover;
 }
-
+.sidebar{
+    position: absolute;
+}
 .container {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;

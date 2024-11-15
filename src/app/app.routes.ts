@@ -12,40 +12,40 @@ import { AdminDasbordComponent } from './common/admin-dasbord/admin-dasbord.comp
 
 export const routes: Routes = [
     {
-        path:"",
-        component:DashbordComponent
+        path: "",
+        component: DashbordComponent
     },
     {
-        path:"Customer_Account",
-        component:CustomerAccountComponent
+        path: "Customer_Account",
+        component: CustomerAccountComponent
     },
     {
-        path:"Service",
-        component:ServiceComponent
+        path: "Service",
+        component: ServiceComponent
     },
     {
-        path:"Appointment",
-        component:AppointmentComponent
+        path: "Appointment",
+        component: AppointmentComponent
     },
     {
-        path:"Feedback",
-        component:FeedbackComponent
+        path: "Feedback",
+        component: FeedbackComponent
     },
     {
-        path:"AdminAppointment",
-        component:AdminAppointmentsViewComponent
+        path: "AdminAppointment",
+        component: AdminAppointmentsViewComponent
     },
     {
-        path:"AdminAcc",
-        component:AdminAccontsViewComponent
+        path: "AdminAcc",
+        component: AdminAccontsViewComponent
     },
     {
-        path:"AdminFeedback",
-        component:AdminFeedbackViewComponent
+        path: "AdminFeedback",
+        component: AdminFeedbackViewComponent
     },
-{
-    path:"Dash",
-    component:AdminDasbordComponent
-}
+    {
+        path: "Dash",
+        component: AdminDasbordComponent
+    }
 
 ];

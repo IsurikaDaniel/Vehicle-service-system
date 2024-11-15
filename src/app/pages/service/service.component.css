@@ -11,6 +11,9 @@ h1 h2{
     color: #6B1B2C;
     font-weight: 350;
 }
+.sidebar{
+    position: absolute;
+  }
 /* .img-fluid{
     height: 200px;
     width: 200px;

@@ -8,7 +8,7 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
 @Component({
   selector: 'app-appointment',
   standalone: true,
-  imports: [FormsModule,CommonModule,HttpClientModule,NavBarComponent],
+  imports: [NavBarComponent,FormsModule,CommonModule,HttpClientModule],
   templateUrl: './appointment.component.html',
   styleUrl: './appointment.component.css'
 })

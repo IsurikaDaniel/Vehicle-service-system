@@ -16,11 +16,11 @@ import { AdminSidebarComponent } from './common/admin-sidebar/admin-sidebar.comp
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,DashbordComponent,NavBarComponent,AppointmentComponent,CustomerAccountComponent,ServiceComponent,FeedbackComponent,AdminAccontsViewComponent,AdminAppointmentsViewComponent,AdminFeedbackViewComponent,AdminDasbordComponent,AdminSidebarComponent],
+  imports: [RouterOutlet, DashbordComponent, NavBarComponent, AppointmentComponent, CustomerAccountComponent, ServiceComponent, FeedbackComponent, AdminAccontsViewComponent, AdminAppointmentsViewComponent, AdminFeedbackViewComponent, AdminDasbordComponent, AdminSidebarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'Vehicle-service';
 
   // ngOnInit() {
@@ -34,5 +34,5 @@ export class AppComponent implements OnInit{
       mirror: false // No animation while scrolling past elements
     });
   }
-  
+
 }

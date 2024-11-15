@@ -1,79 +1,73 @@
-<div class="row">
-  <div class="col-3">
-    <app-nav-bar></app-nav-bar>
-  </div>
-  <div class="col-9">
+<div class="sidebar">
+  <app-nav-bar></app-nav-bar>
+</div>
+<div class="app">
+  <div class="container">
+    <h2>Schedule your Appointment</h2>
 
+    <div class="form-group">
+      <input type="text" placeholder="Your Name" [(ngModel)]="appointment.name">
+    </div>
 
-    <div class="app">
-      <div class="container">
-        <h2>Schedule your Appointment</h2>
+    <div class="form-group">
+      <select [(ngModel)]="appointment.vehicleType">
+        <option value="">Vehicle Type</option>
+        <option value="Jeep">Jeep</option>
+        <option value="Sports car">Sports car</option>
+        <option value="Motorcycles">Motorcycles</option>
+        <option value="Buses">Buses</option>
+      </select>
+    </div>
 
-        <div class="form-group">
-          <input type="text" placeholder="Your Name" [(ngModel)]="appointment.name">
-        </div>
+    <div class="form-group">
+      <input type="text" placeholder="Vehicle Number" [(ngModel)]="appointment.number">
+    </div>
 
-        <div class="form-group">
-          <select [(ngModel)]="appointment.vehicleType">
-            <option value="">Vehicle Type</option>
-            <option value="Jeep">Jeep</option>
-            <option value="Sports car">Sports car</option>
-            <option value="Motorcycles">Motorcycles</option>
-            <option value="Buses">Buses</option>
-          </select>
-        </div>
+    <div class="form-group">
+      <input type="email" placeholder="Email" [(ngModel)]="appointment.email">
+    </div>
 
-        <div class="form-group">
-          <input type="text" placeholder="Vehicle Number" [(ngModel)]="appointment.number">
-        </div>
+    <div class="form-group">
+      <input type="date" [(ngModel)]="appointment.date">
+    </div>
 
-        <div class="form-group">
-          <input type="email" placeholder="Email" [(ngModel)]="appointment.email">
-        </div>
+    <div class="form-group">
+      <select [(ngModel)]="appointment.location">
+        <option value="">Location</option>
+        <option value="Panadura">Panadura</option>
+        <option value="Colombo">Colombo</option>
+        <option value="Kalutara">Kalutara</option>
+      </select>
+    </div>
 
-        <div class="form-group">
-          <input type="date" [(ngModel)]="appointment.date">
-        </div>
+    <div class="form-group">
+      <select [(ngModel)]="appointment.service">
+        <option value="">Service</option>
+        <option value="Oil Changes">Oil Changes</option>
+        <option value="Repair Services">Repair Services</option>
+        <option value="Tire Change">Tire Change</option>
+      </select>
+    </div>
 
-        <div class="form-group">
-          <select [(ngModel)]="appointment.location">
-            <option value="">Location</option>
-            <option value="Panadura">Panadura</option>
-            <option value="Colombo">Colombo</option>
-            <option value="Kalutara">Kalutara</option>
-          </select>
-        </div>
+    <!-- Payment Option -->
+    <div class="d-flex align-items-center p-2">
+      <div class="form-check me-3">
+        <input class="form-check-input custom-radio" type="radio" name="paymentOption"
+          [(ngModel)]="appointment.paymentOption" [value]="'Card Payments'">
+        <label class="form-check-label">
+          Card Payments
+        </label>
+      </div>
 
-        <div class="form-group">
-          <select [(ngModel)]="appointment.service">
-            <option value="">Service</option>
-            <option value="Oil Changes">Oil Changes</option>
-            <option value="Repair Services">Repair Services</option>
-            <option value="Tire Change">Tire Change</option>
-          </select>
-        </div>
-
-        <!-- Payment Option -->
-        <div class="d-flex align-items-center p-2">
-          <div class="form-check me-3">
-            <input class="form-check-input custom-radio" type="radio" name="paymentOption"
-              [(ngModel)]="appointment.paymentOption" [value]="'Card Payments'">
-            <label class="form-check-label">
-              Card Payments
-            </label>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input custom-radio" type="radio" name="paymentOption"
-              [(ngModel)]="appointment.paymentOption" [value]="'Cash Payments'" checked>
-            <label class="form-check-label">
-              Cash Payments
-            </label>
-          </div>
-        </div>
-
-        <button (click)="addAppointment()">Submit</button>
+      <div class="form-check">
+        <input class="form-check-input custom-radio" type="radio" name="paymentOption"
+          [(ngModel)]="appointment.paymentOption" [value]="'Cash Payments'" checked>
+        <label class="form-check-label">
+          Cash Payments
+        </label>
       </div>
     </div>
+
+    <button (click)="addAppointment()">Submit</button>
   </div>
 </div>

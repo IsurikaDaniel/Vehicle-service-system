@@ -1,47 +1,43 @@
-<div class="row">
-    <div class="col-3">
-        <app-nav-bar></app-nav-bar>
+<div class="sidebar">
+    <app-nav-bar></app-nav-bar>
+</div>
+
+<img src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/05ee5590-893d-4e60-8759-1c70397af4a3/Blog/125d30a3-b0ae-43ee-86fc-841212e7cbb6.jpg"
+    alt="" class="imgCus">
+
+<h1>Welcome to our service</h1><br>
+
+<div class="container mb-5 mt-4">
+    <h3 class="mb-3">Make your Account to <br> get best service </h3>
+
+    <div class="form-group">
+        <input type="text" placeholder="Customer Name" [(ngModel)]="customerAcount.name">
     </div>
-    <div class="col-9">
 
-        <img src="https://stauditcentralusaa01prod.blob.core.windows.net/files/Accounts/1/Locations/05ee5590-893d-4e60-8759-1c70397af4a3/Blog/125d30a3-b0ae-43ee-86fc-841212e7cbb6.jpg"
-            alt="" class="imgCus">
+    <div class="form-group">
+        <input type="text" placeholder="Customer Contact" [(ngModel)]="customerAcount.contact">
+    </div>
 
-        <h1>Welcome to our service</h1><br>
+    <div class="form-group">
+        <input type="text" placeholder="Email" [(ngModel)]="customerAcount.email">
+    </div>
 
-        <div class="container mb-5 mt-4">
-            <h3 class="mb-3">Make your Account to <br> get best service </h3>
+    <div class="form-group">
+        <input type="text" placeholder="Address" [(ngModel)]="customerAcount.address">
+    </div>
 
-            <div class="form-group">
-                <input type="text" placeholder="Customer Name" [(ngModel)]="customerAcount.name">
-            </div>
+    <div class="form-group">
+        <input type="text" placeholder="Vehicle Type" [(ngModel)]="customerAcount.vehicleType">
+    </div>
 
-            <div class="form-group">
-                <input type="text" placeholder="Customer Contact" [(ngModel)]="customerAcount.contact">
-            </div>
-
-            <div class="form-group">
-                <input type="text" placeholder="Email" [(ngModel)]="customerAcount.email">
-            </div>
-
-            <div class="form-group">
-                <input type="text" placeholder="Address" [(ngModel)]="customerAcount.address">
-            </div>
-
-            <div class="form-group">
-                <input type="text" placeholder="Vehicle Type" [(ngModel)]="customerAcount.vehicleType">
-            </div>
-
-            <div class="form-group">
-                <input type="text" placeholder="Vehicle Number" [(ngModel)]="customerAcount.vehicleNumber">
-            </div>
-            <!-- 
+    <div class="form-group">
+        <input type="text" placeholder="Vehicle Number" [(ngModel)]="customerAcount.vehicleNumber">
+    </div>
+    <!-- 
   <div class="form-group">
       <input type="text" placeholder="Cheeky Number">
   </div> -->
 
-            <button (click)="addcustomerAcount()">SUBMIT</button>
+    <button (click)="addcustomerAcount()">SUBMIT</button>
 
-        </div>
-    </div>
 </div>
