@@ -38,21 +38,14 @@
                 </svg>
               </div>
               <div class="user-info">
-                <span>Hendry Daniel</span>
+                <input type="text" autocomplete="off" name="text" class="input" placeholder="Username" [(ngModel)]="Feedback.customerName">
                 <p>Wednesday, Nov 6th at 2:45pm</p>
-              </div>
-            </div>
-            <p class="comment-content">
-              I've been geting this product for a few days now and I'm really impressed! The interface is intuitive and
-              easy to
-              use, and the features are exactly what I need to streamline my workflow.
-            </p>
-          </div>
+              </div>           
         </div>
-
+        <!-- {{Feedback.customerName}} -->
         <div class="text-box">
           <div class="box-container">
-            <textarea placeholder="Reply"></textarea>
+            <textarea placeholder="Reply" [(ngModel)]="Feedback.description"></textarea>
             <div>
               <div class="formatting">
                 <button type="button">
@@ -98,7 +91,7 @@
                       d="M8.00897 9L8 9M16 9L15.991 9"></path>
                   </svg>
                 </button>
-                <button type="submit" class="send" title="Send">
+                <button type="submit" class="send" title="Send" (click)="addFeedback()">
                   <svg fill="none" viewBox="0 0 24 24" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" stroke="#ffffff"
                       d="M12 5L12 20"></path>
