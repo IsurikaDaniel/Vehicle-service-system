@@ -16,7 +16,7 @@ import { AdminSidebarComponent } from './common/admin-sidebar/admin-sidebar.comp
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DashbordComponent, NavBarComponent, AppointmentComponent, CustomerAccountComponent, ServiceComponent, FeedbackComponent, AdminAccontsViewComponent, AdminAppointmentsViewComponent, AdminFeedbackViewComponent, AdminDasbordComponent, AdminSidebarComponent],
+  imports: [RouterOutlet, DashbordComponent, NavBarComponent, AppointmentComponent, CustomerAccountComponent, ServiceComponent, FeedbackComponent, AdminAccontsViewComponent, AdminAppointmentsViewComponent, AdminFeedbackViewComponent, AdminDasbordComponent, AdminSidebarComponent,AppComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

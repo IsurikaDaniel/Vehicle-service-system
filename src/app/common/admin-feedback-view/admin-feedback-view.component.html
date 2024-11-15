@@ -1,65 +1,58 @@
-<div class="row">
-    <div class="col-3">
-        <app-admin-sidebar></app-admin-sidebar>
-    </div>
-    <div class="col-9">
-        <div class="container">
-            <table class="table table-bordered table-hover">
-              <tr>
-                <th>ID</th>
-                <th>Customer Name</th>
-                <th>Description</th>
-                <th>Update</th>
-              </tr>
-      
-              <tr *ngFor="let Feedback of FeedBackList; index as i">
-                <td>{{Feedback.id}}</td>
-                <td>{{Feedback.customerName}}</td>
-                <td>{{Feedback.description}}</td>
-            
-                <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                      class="bi bi-pencil-square" (click)=" updateFeedback(Feedback)"></i></button></td>
-                <td><button class="btn btn-danger"><i class="bi bi-trash-fill" (click)="deleteFeedbackById(Feedback.id)"></i></button></td>
-              </tr>
-            </table>
-          </div>
+<app-admin-sidebar></app-admin-sidebar>
+<h2>Customer FeedBack View</h2>
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Customer Name</th>
+            <th>Description</th>
+            <th>Update</th>
+        </tr>
+
+        <tr *ngFor="let Feedback of FeedBackList; index as i">
+            <td>{{Feedback.id}}</td>
+            <td>{{Feedback.customerName}}</td>
+            <td>{{Feedback.description}}</td>
+
+            <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                        class="bi bi-pencil-square" (click)=" updateFeedback(Feedback)"></i></button></td>
+            <td><button class="btn btn-danger"><i class="bi bi-trash-fill"
+                        (click)="deleteFeedbackById(Feedback.id)"></i></button></td>
+        </tr>
+    </table>
+</div>
+
+
+<!-- update modal -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Update Feedback</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">ID</label>
+                    <input type="text" class="form-control" [(ngModel)]="FeedbackTemp.id" id="recipient-name"
+                        disabled="true">
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Customer Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="FeedbackTemp.customerName" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Description</label>
+                    <input type="text" class="form-control" [(ngModel)]="FeedbackTemp.description" id="recipient-name">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="saveUpdateFeedback()"
+                        data-bs-dismiss="modal">Update Feedback</button>
+                </div>
+            </div>
         </div>
     </div>
-
-
-     <!-- update modal -->
-
-
-     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-     <div class="modal-dialog">
-         <div class="modal-content">
-             <div class="modal-header">
-                 <h1 class="modal-title fs-5" id="exampleModalLabel">Update Feedback</h1>
-                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>
-             <div class="modal-body">
-                 <div class="mb-3">
-                     <label for="recipient-name" class="col-form-label">ID</label>
-                     <input type="text" class="form-control" [(ngModel)]="FeedbackTemp.id"
-                         id="recipient-name" disabled="true">
-                 </div>
-                 <div class="mb-3">
-                     <label for="recipient-name" class="col-form-label">Customer Name</label>
-                     <input type="text" class="form-control" [(ngModel)]="FeedbackTemp.customerName"
-                         id="recipient-name">
-                 </div>
-                 <div class="mb-3">
-                     <label for="recipient-name" class="col-form-label">Description</label>
-                     <input type="text" class="form-control" [(ngModel)]="FeedbackTemp.description"
-                         id="recipient-name">
-                 </div>
-            
-             <div class="modal-footer">
-                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                 <button type="button" class="btn btn-primary" (click)="saveUpdateFeedback()"
-                     data-bs-dismiss="modal">Update Feedback</button>
-             </div>
-         </div>
-     </div>
- </div>

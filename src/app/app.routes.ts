@@ -45,7 +45,7 @@ export const routes: Routes = [
     },
     {
         path: "Dash",
-        component: AdminDasbordComponent
+        component:AdminDasbordComponent
     }
 
 ];
