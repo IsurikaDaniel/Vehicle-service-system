@@ -5,6 +5,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ConactbarComponent } from '../contactbar/conactbar.component';
+import { ConactsidebarComponent } from '../contactsidebar/conactsidebar.component';
 
 declare var bootstrap: any;
 interface SidebarOption {
@@ -22,7 +24,7 @@ interface Account { // Define the Account interface
 @Component({
   selector: 'app-admin-dasbord',
   standalone: true,
-  imports: [AdminSidebarComponent,HttpClientModule,FormsModule,CommonModule,RouterLink],
+  imports: [AdminSidebarComponent,HttpClientModule,FormsModule,CommonModule,RouterLink,ConactbarComponent,ConactsidebarComponent],
   templateUrl: './admin-dasbord.component.html',
   styleUrl: './admin-dasbord.component.css'
 })

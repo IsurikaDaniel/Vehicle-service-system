@@ -4,11 +4,12 @@ import Swal from 'sweetalert2';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ConactbarComponent } from '../../common/contactbar/conactbar.component';
 
 @Component({
   selector: 'app-feedback',
   standalone: true,
-  imports: [NavBarComponent,FormsModule,CommonModule,HttpClientModule],
+  imports: [NavBarComponent,FormsModule,CommonModule,HttpClientModule,ConactbarComponent],
   templateUrl: './feedback.component.html',
   styleUrl: './feedback.component.css'
 })

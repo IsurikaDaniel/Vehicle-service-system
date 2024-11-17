@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-admin-feedback-view',
   standalone: true,
-  imports: [AdminSidebarComponent,HttpClientModule,CommonModule,FormsModule],
+  imports: [AdminSidebarComponent, HttpClientModule, CommonModule, FormsModule],
   templateUrl: './admin-feedback-view.component.html',
   styleUrl: './admin-feedback-view.component.css'
 })

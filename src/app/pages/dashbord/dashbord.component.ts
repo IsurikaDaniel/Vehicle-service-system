@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
+import { ConactbarComponent } from '../../common/contactbar/conactbar.component';
+import { ConactsidebarComponent } from '../../common/contactsidebar/conactsidebar.component';
 declare var bootstrap: any;
 interface SidebarOption {
   label: string;
@@ -22,7 +24,7 @@ interface Account { // Define the Account interface
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [HttpClientModule,FormsModule,CommonModule,RouterLink,NavBarComponent],
+  imports: [HttpClientModule,FormsModule,CommonModule,RouterLink,NavBarComponent,ConactsidebarComponent],
   templateUrl: './dashbord.component.html',
   styleUrls: ['./dashbord.component.css']
 })

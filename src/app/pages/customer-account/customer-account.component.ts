@@ -5,11 +5,12 @@ import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import Swal from 'sweetalert2';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ConactbarComponent } from '../../common/contactbar/conactbar.component';
 
 @Component({
   selector: 'app-customer-account',
   standalone: true,
-  imports: [NavBarComponent,FormsModule,CommonModule,HttpClientModule],
+  imports: [NavBarComponent,FormsModule,CommonModule,HttpClientModule,ConactbarComponent],
   templateUrl: './customer-account.component.html',
   styleUrl: './customer-account.component.css'
 })
