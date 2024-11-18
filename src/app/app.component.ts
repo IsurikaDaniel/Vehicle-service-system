@@ -12,6 +12,7 @@ import Aos from 'aos';
 import { AdminFeedbackViewComponent } from './common/admin-feedback-view/admin-feedback-view.component';
 import { AdminDasbordComponent } from './common/admin-dasbord/admin-dasbord.component';
 import { AdminSidebarComponent } from './common/admin-sidebar/admin-sidebar.component';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
@@ -23,16 +24,15 @@ import { AdminSidebarComponent } from './common/admin-sidebar/admin-sidebar.comp
 export class AppComponent implements OnInit {
   title = 'Vehicle-service';
 
-  // ngOnInit() {
-  //   Aos.init();
-  // }
-  ngOnInit() {
+  ngOnInit(): void {
     Aos.init({
       duration: 800, // Adjust the animation duration in milliseconds
       easing: 'ease-in-out', // Set the easing style
       once: true, // Animation will only happen once while scrolling down
       mirror: false // No animation while scrolling past elements
     });
+
+    initFlowbite();
   }
 
 }
