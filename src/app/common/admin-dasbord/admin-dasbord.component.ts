@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ConactbarComponent } from '../contactbar/conactbar.component';
 import { ConactsidebarComponent } from '../contactsidebar/conactsidebar.component';
+import { DonutchartComponent } from '../../charts/donutchart/donutchart.component';
 
 declare var bootstrap: any;
 interface SidebarOption {
@@ -24,7 +25,7 @@ interface Account { // Define the Account interface
 @Component({
   selector: 'app-admin-dasbord',
   standalone: true,
-  imports: [AdminSidebarComponent,HttpClientModule,FormsModule,CommonModule,ConactsidebarComponent],
+  imports: [AdminSidebarComponent,HttpClientModule,FormsModule,CommonModule,ConactsidebarComponent,DonutchartComponent],
   templateUrl: './admin-dasbord.component.html',
   styleUrl: './admin-dasbord.component.css'
 })

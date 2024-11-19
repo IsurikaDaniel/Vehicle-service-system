@@ -17,7 +17,7 @@ import { initFlowbite } from 'flowbite';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DashbordComponent, NavBarComponent, AppointmentComponent, CustomerAccountComponent, ServiceComponent, FeedbackComponent, AdminAccontsViewComponent, AdminAppointmentsViewComponent, AdminFeedbackViewComponent, AdminDasbordComponent, AdminSidebarComponent,AppComponent],
+  imports: [RouterOutlet, DashbordComponent, NavBarComponent, AppointmentComponent, CustomerAccountComponent, ServiceComponent, FeedbackComponent, AdminAccontsViewComponent, AdminAppointmentsViewComponent, AdminFeedbackViewComponent, AdminDasbordComponent, AdminSidebarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
