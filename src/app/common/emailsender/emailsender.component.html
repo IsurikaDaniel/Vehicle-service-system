@@ -1,43 +1,55 @@
 <div class="div m-3">
-    <app-admin-sidebar></app-admin-sidebar>
+  <app-admin-sidebar></app-admin-sidebar>
 </div>
 <h2>Send Email to Customer</h2>
 <div class="container">
-<div class="form-card1">
-  <div class="form-card2">
-    <form class="form">
-      <p class="form-heading">Get In Touch</p>
+  <div class="form-card1">
+    <div class="form-card2">
+<form class="form" #emailForm="ngForm" (ngSubmit)="sendEmail(emailForm)" novalidate>
+  <p class="form-heading">Get In Touch</p>
 
-      <div class="form-field">
-        <input
-          required=""
-          placeholder="Email"
-          class="input-field"
-          type="email"
-        />
-      </div>
-
-      <div class="form-field">
-        <input
-          required=""
-          placeholder="Subject"
-          class="input-field"
-          type="text"
-        />
-      </div>
-
-      <div class="form-field">
-        <textarea
-          required=""
-          placeholder="Message"
-          cols="30"
-          rows="3"
-          class="input-field"
-        ></textarea>
-      </div>
-
-      <button class="sendMessage-btn">Send Message</button>
-    </form>
+  <div class="form-field">
+    <input [(ngModel)]="emailSender.recipient"
+           name="recipient"
+           required
+           placeholder="Email"
+           class="input-field"
+           type="email"
+           #recipient="ngModel" />
+    <div *ngIf="recipient.invalid && recipient.touched" class="error">
+      Valid email is required.
+    </div>
   </div>
-</div>
+
+  <div class="form-field">
+    <input [(ngModel)]="emailSender.subject"
+           name="subject"
+           required
+           placeholder="Subject"
+           class="input-field"
+           type="text"
+           #subject="ngModel" />
+    <div *ngIf="subject.invalid && subject.touched" class="error">
+      Subject is required.
+    </div>
+  </div>
+
+  <div class="form-field">
+    <textarea [(ngModel)]="emailSender.message"
+              name="message"
+              required
+              placeholder="Message"
+              cols="30"
+              rows="3"
+              class="input-field"
+              #message="ngModel"></textarea>
+    <div *ngIf="message.invalid && message.touched" class="error">
+      Message is required.
+    </div>
+  </div>
+
+  <button class="sendMessage-btn" [disabled]="emailForm.invalid" type="submit">Send Message</button>
+</form>
+    </div>
+  </div>
 </div>
