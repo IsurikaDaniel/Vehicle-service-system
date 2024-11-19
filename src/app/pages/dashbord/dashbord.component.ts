@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import Swal from 'sweetalert2';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
-import { ConactbarComponent } from '../../common/contactbar/conactbar.component';
 import { ConactsidebarComponent } from '../../common/contactsidebar/conactsidebar.component';
 import { DonutchartComponent } from '../../charts/donutchart/donutchart.component';
 import { SalesDiagramComponent } from '../../charts/sales-diagram/sales-diagram.component';

@@ -9,6 +9,7 @@ import { AdminAccontsViewComponent } from './common/admin-acconts-view/admin-acc
 import { AdminAppointmentsViewComponent } from './common/admin-appointments-view/admin-appointments-view.component';
 import { AdminFeedbackViewComponent } from './common/admin-feedback-view/admin-feedback-view.component';
 import { AdminDasbordComponent } from './common/admin-dasbord/admin-dasbord.component';
+import { EmailsenderComponent } from './common/emailsender/emailsender.component';
 
 export const routes: Routes = [
     {
@@ -46,6 +47,10 @@ export const routes: Routes = [
     {
         path: "Dash",
         component:AdminDasbordComponent
+    },
+    {
+        path: "Email",
+        component:EmailsenderComponent
     }
 
 ];

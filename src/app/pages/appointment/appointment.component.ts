@@ -4,11 +4,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
+import { ConactbarComponent } from '../../common/contactbar/conactbar.component';
 
 @Component({
   selector: 'app-appointment',
   standalone: true,
-  imports: [NavBarComponent,FormsModule,CommonModule,HttpClientModule],
+  imports: [NavBarComponent,FormsModule,CommonModule,HttpClientModule,ConactbarComponent],
   templateUrl: './appointment.component.html',
   styleUrl: './appointment.component.css'
 })

@@ -1,6 +1,5 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { NavBarComponent } from "../nav-bar/nav-bar.component";
 import Swal from 'sweetalert2';
 import { HttpClient, HttpClientModule } from '@angular/common/http';

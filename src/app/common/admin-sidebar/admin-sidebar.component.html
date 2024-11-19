@@ -37,6 +37,14 @@
           Account
         </a>
       </li>
+      <li (click)="changeSelectSidebar('Email')" routerLink="/Email">
+        <a class="nav-link" [ngClass]="{'active': SelectSidebar == 'Email'}">
+          <svg class="bi pe-none me-2" width="16" height="16">
+            <use xlink:href="#table" />
+          </svg>
+          Email
+        </a>
+      </li>
       <li (click)="changeSelectSidebar('AdminFeedback')" routerLink="/AdminFeedback">
         <a [ngClass]="{'active': SelectSidebar == 'AdminFeedback'}" class="nav-link">
           <svg class="bi pe-none me-2" width="16" height="16">
