@@ -24,7 +24,7 @@ interface Account { // Define the Account interface
 @Component({
   selector: 'app-admin-dasbord',
   standalone: true,
-  imports: [AdminSidebarComponent,HttpClientModule,FormsModule,CommonModule,RouterLink,ConactbarComponent,ConactsidebarComponent],
+  imports: [AdminSidebarComponent,HttpClientModule,FormsModule,CommonModule,ConactsidebarComponent],
   templateUrl: './admin-dasbord.component.html',
   styleUrl: './admin-dasbord.component.css'
 })
