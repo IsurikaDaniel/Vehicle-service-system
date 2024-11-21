@@ -8,9 +8,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-emailsender',
   standalone: true,
-  imports: [AdminSidebarComponent,HttpClientModule,CommonModule,FormsModule],
+  imports: [AdminSidebarComponent, HttpClientModule, CommonModule, FormsModule],
   templateUrl: './emailsender.component.html',
-  styleUrl: './emailsender.component.css'
+  styleUrls: ['./emailsender.component.css'] // Fixed typo: 'styleUrl' to 'styleUrls'
 })
 export class EmailsenderComponent {
   public emailSender: any = {
@@ -35,19 +35,19 @@ export class EmailsenderComponent {
 
     this.http.post("http://localhost:8080/sendEmail", this.emailSender).subscribe(
       (res: any) => {
-        // Check the response status
-        if (res && res.status === "success") { 
+        // Ensure server response is checked correctly
+        if (res && res.status === "200") {
           console.log("Response from server:", res);
           Swal.fire({
             title: "Success",
-            text: res.message || "Email sent successfully!",
+            text: "Email sent successfully!",
             icon: "success"
           });
         } else {
           console.error("Unexpected response from server:", res);
           Swal.fire({
             title: "Error",
-            text: res.message || "The server responded, but the email could not be sent. Please try again.",
+            text: res.message || "The email could not be sent. Please try again.",
             icon: "error"
           });
         }
@@ -62,9 +62,5 @@ export class EmailsenderComponent {
         });
       }
     );
-    
-    
-    
   }
-  
 }
