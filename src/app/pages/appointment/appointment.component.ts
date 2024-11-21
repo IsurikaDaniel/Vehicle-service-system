@@ -34,19 +34,17 @@ export class AppointmentComponent {
     this.http.post("http://localhost:8080/Appointment/add-appointment", this.appointment).subscribe(
       (res: any) => {
         console.log(res);
-        if (res === true) {
-          Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Appointment Added!",
-            showConfirmButton: false,
-            timer: 1500
-          });
-        } else {
+        if (res.status === "200") {
           Swal.fire({
             title: "success",
             text: `Appointment Added!`,
             icon: "success"
+          });
+        } else {
+          Swal.fire({
+            title: "error",
+            text: `Can't add Appointment `,
+            icon: "error"
           });
         }
       },
