@@ -3,7 +3,7 @@
 </div>
 <h2>Customer Appointment View</h2>
 <div class="container">
-    
+
     <div class="row">
         <div class="col-6 mb-5">
             <!-- search btn1 -->
@@ -30,9 +30,7 @@
                     </button>
                 </label>
             </form>
-
         </div>
-
         <!-- serch btn2 -->
         <div class="col-6">
             <input required="" type="date" placeholder="Your Name" class="input2">
@@ -51,11 +49,12 @@
     <table class="table table-bordered table-hover">
         <tr>
             <th>ID</th>
+            <th>Date</th>
             <th>Customer Name</th>
+            <th>Customer Number</th>
             <th>Vehicle Type</th>
             <th>Vehicle Number</th>
             <th>Email</th>
-            <th>Date</th>
             <th>Location</th>
             <th>Service</th>
             <!-- <th>Payments</th> -->
@@ -64,11 +63,12 @@
 
         <tr *ngFor="let appointment of appointmentList; index as i">
             <td>{{appointment.id}}</td>
-            <td>{{appointment.name}}</td>
-            <td>{{appointment.vehicleType}}</td>
-            <td>{{appointment.number}}</td>
-            <td>{{appointment.email}}</td>
             <td>{{appointment.date}}</td>
+            <td>{{appointment.name}}</td>
+            <td>{{appointment.number}}</td>
+            <td>{{appointment.vehicleType}}</td>
+            <td>{{appointment.vehicleNumber}}</td>
+            <td>{{appointment.email}}</td>
             <td>{{appointment.location}}</td>
             <td>{{appointment.service}}</td>
             <!-- <td>Card Payments</td> -->
@@ -97,8 +97,17 @@
                             disabled="true">
                     </div>
                     <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Date</label>
+                        <input type="date" class="form-control" [(ngModel)]="appointmentTemp.date" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Name</label>
                         <input type="text" class="form-control" [(ngModel)]="appointmentTemp.name" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Customer Number</label>
+                        <input type="text" class="form-control" [(ngModel)]="appointmentTemp.number"
+                            id="recipient-name">
                     </div>
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Vehicle Type</label>
@@ -106,8 +115,8 @@
                             id="recipient-name">
                     </div>
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Vehicle Number</label>
-                        <input type="text" class="form-control" [(ngModel)]="appointmentTemp.number"
+                        <label for="recipient-name" class="col-form-label">Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="appointmentTemp.vehicleNumber"
                             id="recipient-name">
                     </div>
                     <div class="mb-3">

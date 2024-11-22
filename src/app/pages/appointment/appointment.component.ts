@@ -23,7 +23,7 @@ export class AppointmentComponent {
     date:"",
     location:"",
     service:"",
-    paymentOption: "Cash Payments"
+    paymentOption: "Card Payments"
   };
 
   constructor(private http:HttpClient){}
