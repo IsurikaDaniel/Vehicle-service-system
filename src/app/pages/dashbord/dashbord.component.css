@@ -16,9 +16,10 @@
 background-color: #8D939D;
 }
 
-input {
+.form-control {
     width: 70%;
     display: block;
+    margin-top: 10px;
     margin: 0 auto; 
     background-color: #DFE4EA;
 }

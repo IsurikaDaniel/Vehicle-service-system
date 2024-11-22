@@ -14,6 +14,7 @@ import { AdminSidebarComponent } from '../admin-sidebar/admin-sidebar.component'
 export class AdminAppointmentsViewComponent {
 
   public appointmentList:any = [];
+  // public searchByService: string = '';
 
   constructor(private http:HttpClient){
      this.loadTable();  
@@ -49,4 +50,25 @@ public appointmentTemp:any={}
       alert("Appointment Updated!!!!!")
     })
   }
+
+    // Search appointments by Patient ID
+    // searchAppointmentsByService(): void {
+    //   if (this.searchByService.trim() === '') {
+    //     alert('Please enter a valid Patient ID.');
+    //     return;
+    //   }
+  
+    //   const apiUrl = `http://localhost:8080/appointment/search-by-patientId/${this.searchByService}`;
+  
+    //   this.http.get(apiUrl).subscribe(
+    //     (data: any) => {
+    //       console.log(data);
+    //       this.appointmentList = Array.isArray(data) ? data : [data]; // Ensure data is an array
+    //     },
+    //     (error) => {
+    //       console.error('Error searching appointments:', error);
+    //       alert('No appointments found for the given Patient ID.');
+    //     }
+    //   );
+    // }
 }

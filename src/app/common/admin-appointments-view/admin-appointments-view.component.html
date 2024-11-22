@@ -9,10 +9,12 @@
             <!-- search btn1 -->
             <form class="form">
                 <label for="search">
-                    <input class="input1" type="text" required="" placeholder="Search here" id="search">
+                    <!-- [(ngModel)]="searchByService" -->
+                    <input class="input1" type="text" required="" placeholder="Search here" id="search" >
                     <div class="fancy-bg"></div>
                     <div class="search">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                        <!-- (click)="searchAppointmentsByService()" -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true" 
                             class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
                             <g>
                                 <path
@@ -71,7 +73,7 @@
             <td>{{appointment.email}}</td>
             <td>{{appointment.location}}</td>
             <td>{{appointment.service}}</td>
-            <!-- <td>Card Payments</td> -->
+    
             <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                     (click)="updateAppointment(appointment)"><i class="bi bi-pencil-square"></i></button></td>
             <td><button class="btn btn-danger" (click)="deleteAppointmentById(appointment.id)"><i
@@ -81,8 +83,6 @@
 
 
     <!-- update modal -->
-
-
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -115,13 +115,9 @@
                             id="recipient-name">
                     </div>
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Name</label>
+                        <label for="recipient-name" class="col-form-label">Vehicle Number</label>
                         <input type="text" class="form-control" [(ngModel)]="appointmentTemp.vehicleNumber"
                             id="recipient-name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Email</label>
-                        <input type="text" class="form-control" [(ngModel)]="appointmentTemp.email" id="recipient-name">
                     </div>
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Date</label>

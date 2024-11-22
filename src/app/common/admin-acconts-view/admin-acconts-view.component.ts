@@ -27,7 +27,7 @@ export class AdminAccontsViewComponent {
     })
   }
 
-  deleteAppointmentById(id:any){
+  deleteAccountById(id:any){
     console.log(id);
 
     this.http.delete(`http://localhost:8080/CustomerAcc/delete-by-id/${id}`).subscribe(data=>{
@@ -38,13 +38,13 @@ export class AdminAccontsViewComponent {
 }
 
 public accountTemp:any={}
-  updateAppointment(account:any){
+  updateAccount(account:any){
     console.log(account);
     this.accountTemp=account;
     
   }
-  saveAppointment(){
-    this.http.put("http://localhost:8080/CustomerAcc/update-account",this.accountTemp).subscribe(data=>{
+  saveAccount(){
+    this.http.put("http://localhost:8080/CustomerAcc/update-customerAcc",this.accountTemp).subscribe(data=>{
       alert("Account Updated!!!!!")
     })
   }
